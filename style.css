@@ -29,9 +29,6 @@ body{
     stroke-width: 4px;
 }
 
-.item {
-    /* displey: none; */
-}
 
 #wrong-letters {
     position: absolute;
@@ -46,8 +43,35 @@ body{
     position: absolute;
     bottom: 10px;
     left: 50%;
+    transform: translateX(-50);
     
 
+}
+#popup-container{
+    background-color: rgba(0, 0, 0,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+     
+}
+
+.popup{
+    color: #0076ec;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+
+
+}
+.item{
+    display: none;
 }
 
 .letter{
@@ -59,4 +83,20 @@ body{
     display: inline-flex;
     justify-content: center;
     align-items: center;
+}
+
+#message{
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 10px 80px;
+    position: absolute;
+    bottom: -80px;
+    transition: transform 0.4 ease-in-out;
+
+}
+
+#message.show{
+    transform: translateY(-80px);
+    
 }
